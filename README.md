@@ -1,6 +1,10 @@
-# Navodila
+## Navodila za zagon aplikacije
+1. Potrebna sta Python 3 in pip
+2. Uporabi virtual environment za potrebne knjižnice
+3. Ukaz ```flask run``` požene server, da lahko odpremo aplikacijo na http://localhost:3000
 
-## Opis problema in oblikovanje projektne naloge:
+## Navodila za hackathon
+### Opis problema in oblikovanje projektne naloge:
 - Za ogrevanje poslovnih in industrijskih prostorov se uporablja energent kurilno olje (KO), ki se hrani v 20m3 rezervoarju, ki je nepravilne valjaste oblike (vodoravno postavljen »valj«, obe stranici sta elipsi). V rezervoarju se za spremljanje stanja izvaja meritev nivoja kurilnega olja (KO). Poraba KO se izračunava na podlagi formule volumna, ki izhaja iz oblike rezervoarja in razlike izmerjenega nivoja.
 
 
@@ -25,7 +29,7 @@
 
 ---
 
-## Naloge
+### Naloge
 
 1. **Del naloge: ugotavljanje anomalij podatkov in s korekcijami zagotoviti verodostojnost podatkov o dnevnih porabah energenta¸**
 
