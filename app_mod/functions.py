@@ -1,6 +1,7 @@
 from os import listdir, path
 from datetime import datetime
 from app_mod.models import Data
+import csv
 
 
 def initialize():
@@ -18,11 +19,16 @@ def initialize():
 
     return dataList
 
-def fix():
-    pass
 
-def export():
-    pass
+def fix(data):
+    return data
+
+
+def export(data):
+    exData = [(a.date, a.consumption) for a in data]
+    with open('poraba-2021.csv', 'w') as f:
+        write = csv.writer(f)
+        write.writerows(exData)
 
 
 def dates(dir):
