@@ -16,13 +16,26 @@
         <div class="container buttons">
             <div class="row">
                 <div class="col-1"></div>
-                    <a class="btn btn-primary col-4" href="{{ url_for('fixed') }}">Popravi napake</a>
+                    {% if not fixed %}
+                        <a class="btn btn-primary col-4" href="{{ url_for('fixed') }}">Popravi napake</a>
+                    {% else %}
+                        <a class="btn btn-secondary col-4" href="{{ url_for('index') }}">Nazaj na prvotno stanje</a>
+                    {% endif %}
                 <div class="col-2"></div>
-                    <a class="btn btn-warning col-4" href="{{ url_for('export') }}">Izvozi za Access</a>
+                    {% if not fixed %}
+                        <a class="btn btn-warning col-4" href="{{ url_for('export') }}">Izvozi za Access</a>
+                    {% else %}
+                        <a class="btn btn-warning col-4" href="{{ url_for('exportfixed') }}">Izvozi za Access</a>
+                    {% endif %}
                 <div class="col-1"></div>
             </div>
         </div>
         <div class="container">
+                <div class="row data">
+                    <div class="col"><b>Datum</b></div>
+                    <div class="col"><b>Poraba</b></div>
+                    <div class="col"><b>Povprečen volumen</b></div>
+                </div>
             {% for value in data %}
                 <div class="row data">
                     <div class="col">{{ value.date }}</div>
@@ -30,8 +43,14 @@
                     {% if value.valid %}
                         <div class="col">{{ value.consumption }}</div>
                     {% else %}
-                        <div class="col danger">{{ value.consumption }}</div>
+                        {% if not fixed %}
+                            <div class="col danger">{{ value.consumption }}</div>
+                        {% else %}
+                            <div class="col success">{{ value.trueConsumption }}</div>
+                        {% endif %}
                     {% endif %}
+
+                    <div class="col">{{ value.volume }}</div>
                 </div>
             {% endfor %}
         </div>
