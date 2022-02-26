@@ -3,7 +3,11 @@
 2. Uporabi virtual environment za potrebne knjižnice
 3. Ukaz ```flask run``` požene server, da lahko odpremo aplikacijo na http://localhost:3000
 
-## Navodila za hackathon
+GitHub repository - https://github.com/timrekelj/hackathon-best-2022
+
+Sodelujoči - [Tim Rekelj](https://github.com/timrekelj), [Andraž Adamič](https://github.com/ayo17), [Petar Petrović](https://github.com/GameExplorer)
+
+## Navodila za hackathon (BEST Hackathon 2022)
 ### Opis problema in oblikovanje projektne naloge:
 - Za ogrevanje poslovnih in industrijskih prostorov se uporablja energent kurilno olje (KO), ki se hrani v 20m3 rezervoarju, ki je nepravilne valjaste oblike (vodoravno postavljen »valj«, obe stranici sta elipsi). V rezervoarju se za spremljanje stanja izvaja meritev nivoja kurilnega olja (KO). Poraba KO se izračunava na podlagi formule volumna, ki izhaja iz oblike rezervoarja in razlike izmerjenega nivoja.
 
